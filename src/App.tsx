@@ -1,7 +1,11 @@
+import { Dashboard } from "./components/Dashboard";
+import { Header } from "./components/Header";
+
 export function Weather() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Header />
+      <Dashboard />
+    </>
   );
 }
