@@ -4,7 +4,7 @@ export const Container = styled.header`
   background: var(--blue);
   display: flex;
   align-items: center;
-  padding: 2rem ;
+  padding: 1rem 2rem;
   
   strong { 
     color: var(--primary);

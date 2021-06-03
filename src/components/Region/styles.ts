@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
+export const Button = styled.button`
+  display: block;
+  margin-left: auto;
+  height: 2rem;
+  width: 5rem;
+  border: 0;
+  border-radius: 4rem;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 500;
+`;
+
 export const Container = styled.div`
   margin-top: 1rem;
   
@@ -24,10 +36,7 @@ export const Container = styled.div`
         color: var(--dark);
         background: var(--white);
 
-        button {
-          display: block;
-          margin-left: auto;
-        }
+        
     }
     }
 

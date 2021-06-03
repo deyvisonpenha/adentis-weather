@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+
+import { Card } from './components/Card'
+
 import { Container } from './styles';
 
-export function Forecast() {
-  const [forecast, setForecast] = useState([]);
+import { IForecast, IState } from './forecast.types';
 
-  const regionId = useSelector( (state: any) => state.globalIdLocal)
+export function Forecast() {
+  const [forecast, setForecast] = useState<IForecast[]>([]);
+
+  const regionId = useSelector( (state: IState) => state.globalIdLocal);
 
   useEffect(()=>{
     if(!!regionId) {
@@ -17,14 +22,8 @@ export function Forecast() {
 
   return(
     <Container>
-      <h1>Forecast</h1>
-      { forecast.map((item:any, index) => (
-        <div key={index}>
-          <h3>{item.predWindDir} {item.forecastDate}</h3>
-          <p>Minimum temperature: {item.tMin}˚C</p>
-          <p>Maximum temperature: {item.tMax}˚C</p>
-          <p>% precipitation: {item.precipitaProb}%</p>
-        </div>
+      { forecast.map((item: IForecast, index) => (
+        <Card forecast={item} key={index} />
       ))}
     </Container>
   )

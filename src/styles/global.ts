@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     --primary: #43A0D6;
     --success: #2F974C;
     --dark: #38414A;
-    --shape: #F5F5F5;
+    --shape: #A2A2A2;
   }
 
   * {

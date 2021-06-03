@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 
-import { Container } from "./styles";
+import { Container, Button } from "./styles";
 
-import { RequestData } from '../Dashboard/index';
+import { RequestData } from '../Dashboard/dashboard.types';
 import { ShowForecast } from '../../store/forecast/forecast.actions';
 
 interface Props{
@@ -12,7 +12,7 @@ interface Props{
 export function Region({regions}: Props){
   const dispatch = useDispatch();
 
-  const handleRegionWeather = ((globalIdLocal: Number) => {
+  const handleShowWeather = ((globalIdLocal: Number) => {
     dispatch(ShowForecast(globalIdLocal));
   }) 
 
@@ -21,19 +21,19 @@ export function Region({regions}: Props){
       <table>
         <thead>
           <tr>
-            <td>Local</td>
+            <td>Region</td>
             <td>Code</td>
-            <td>Area</td>
+            <td>Local</td>
           </tr>
         </thead>
        <tbody>
          {regions.map(region => (
             <tr key={region.globalIdLocal}>
-              <td>{region.local}</td>
-              <td>{region.globalIdLocal}</td>
               <td>{region.idAreaAviso}</td>
+              <td>{region.globalIdLocal}</td>
+              <td>{region.local}</td>
               <td>
-                <button onClick={()=>handleRegionWeather(region.globalIdLocal)}>Show</button>
+                <Button onClick={()=>handleShowWeather(region.globalIdLocal)}>Show</Button>
               </td>
             </tr>
          ))}
