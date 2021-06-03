@@ -17,7 +17,7 @@ export function Dashboard(){
   const [searchRegions, setSearchRegions] = useState([] as RequestData[]);
 
   useEffect(()=>{
-   fetch('http://api.ipma.pt/open-data/distrits-islands.json')
+   fetch('https://api.ipma.pt/open-data/distrits-islands.json')
     .then(response => response.json())
     .then(items => {
       setRegions(items.data);
@@ -43,7 +43,7 @@ export function Dashboard(){
         />
         <Region regions={searchRegions}/>
       </LeftContent>
-      
+
       <RightContent>
         <h2>Forecast</h2>
         <Forecast />

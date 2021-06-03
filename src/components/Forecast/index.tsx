@@ -14,7 +14,7 @@ export function Forecast() {
 
   useEffect(()=>{
     if(!!regionId) {
-      fetch(`http://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${regionId}.json`)
+      fetch(`https://api.ipma.pt/open-data/forecast/meteorology/cities/daily/${regionId}.json`)
       .then(response => response.json())
       .then(items => setForecast(items.data));
     }
