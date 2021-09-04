@@ -5,7 +5,8 @@
 
 # Weather
 
-This project was developed in React to a project interview that a developed a weather system for regions in Portugal. 
+This project was developed in ReactJs to a interview when I developed a weather system for regions in Portugal, to view precipitation, minimum and maximum temperature. 
+
 ### For this challenge I used:
  * ReactJs 
  * styled-components
