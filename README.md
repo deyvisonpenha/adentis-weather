@@ -5,7 +5,7 @@
 
 # Weather
 
-This project was developed to a project interview that a developed a weather system for regions in Portugal. 
+This project was developed in React to a project interview that a developed a weather system for regions in Portugal. 
 ### For this challenge I used:
  * ReactJs 
  * styled-components
