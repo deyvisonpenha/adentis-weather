@@ -11,6 +11,7 @@ This project was developed in ReactJs to a interview when I developed a weather 
  * ReactJs 
  * styled-components
  * Weather API
+ * Redux
 
 ### Hooks as:
 * useContext, 
